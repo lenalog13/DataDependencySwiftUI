@@ -5,15 +5,16 @@
 //  Created by Елена Логинова on 14.04.2023.
 //
 
-import Foundation
 import Combine
+import Foundation
 
-class TimeCounter {
+class TimeCounter: ObservableObject {
+    let objectWillChange = PassthroughSubject<TimeCounter, Never>()
     var counter = 3
     var timer: Timer?
     
     func startTimer() {
-        timer = Timer(
+        timer = Timer.scheduledTimer(
             timeInterval: 1,
             target: self,
             selector: #selector(updateCounter),
@@ -27,6 +28,7 @@ class TimeCounter {
         } else {
             killTimer()
         }
+        objectWillChange.send(self)
     }
     
     private func killTimer() {
