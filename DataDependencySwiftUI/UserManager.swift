@@ -10,6 +10,4 @@ import Foundation
 class UserManager: ObservableObject {
     @Published var isRegister = false
     var name = ""
-    
-    
 }
