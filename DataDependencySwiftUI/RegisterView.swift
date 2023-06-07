@@ -8,8 +8,23 @@
 import SwiftUI
 
 struct RegisterView: View {
+    @State private var name = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            TextField("Enter your name", text: $name)
+                .multilineTextAlignment(.center)
+            Button(action: registerUser) {
+                HStack {
+                    Image(systemName: "checkmark.circle")
+                    Text("OK")
+                }
+            }
+        }
+    }
+    
+    private func registerUser() {
+        
     }
 }
 
