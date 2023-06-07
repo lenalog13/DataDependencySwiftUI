@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct DataDependencySwiftUIApp: App {
+    @StateObject private var userManager = UserManager()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
