@@ -11,6 +11,10 @@ class UserManager: ObservableObject {
     @Published var isRegister = false
     var name = ""
     
+    var nameIsValid: Bool {
+        name.count >= 3
+    }
+    
     func logOut() {
         name = ""
         isRegister = false
