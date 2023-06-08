@@ -25,7 +25,7 @@ struct RegisterView: View {
     }
     
     private func registerUser() {
-        userManager.user.isRegister = true
+        userManager.user.isRegister.toggle()
         DataManager.shared.save(user: userManager.user)
     }
     
