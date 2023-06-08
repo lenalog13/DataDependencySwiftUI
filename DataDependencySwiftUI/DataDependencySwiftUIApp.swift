@@ -9,12 +9,14 @@ import SwiftUI
 
 @main
 struct DataDependencySwiftUIApp: App {
-    @StateObject private var userManager = UserManager()
+    
+    private let user = DataManager.shared.fetchUser()
     
     var body: some Scene {
         WindowGroup {
             StarterView()
-                .environmentObject(userManager)
+                .environmentObject(UserManager(user: user))
         }
     }
+    
 }

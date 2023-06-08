@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D1B11A32A31B1E00021E1E0 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1B11A22A31B1E00021E1E0 /* ButtonView.swift */; };
+		4D1B11A52A3211BD0021E1E0 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1B11A42A3211BD0021E1E0 /* DataManager.swift */; };
 		4D9F34E329E9A01D00DEDD30 /* DataDependencySwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9F34E229E9A01D00DEDD30 /* DataDependencySwiftUIApp.swift */; };
 		4D9F34E529E9A01D00DEDD30 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9F34E429E9A01D00DEDD30 /* TimerView.swift */; };
 		4D9F34E729E9A01F00DEDD30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D9F34E629E9A01F00DEDD30 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		4D1B11A22A31B1E00021E1E0 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		4D1B11A42A3211BD0021E1E0 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		4D9F34DF29E9A01D00DEDD30 /* DataDependencySwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataDependencySwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D9F34E229E9A01D00DEDD30 /* DataDependencySwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDependencySwiftUIApp.swift; sourceTree = "<group>"; };
 		4D9F34E429E9A01D00DEDD30 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				4D1B11A22A31B1E00021E1E0 /* ButtonView.swift */,
 				4D9F34F429E9A14800DEDD30 /* TimeCounter.swift */,
 				4D9F34F629E9A16100DEDD30 /* UserManager.swift */,
+				4D1B11A42A3211BD0021E1E0 /* DataManager.swift */,
 				4D9F34E629E9A01F00DEDD30 /* Assets.xcassets */,
 				4D9F34E829E9A01F00DEDD30 /* Preview Content */,
 			);
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D9F34F729E9A16100DEDD30 /* UserManager.swift in Sources */,
+				4D1B11A52A3211BD0021E1E0 /* DataManager.swift in Sources */,
 				4D9F34F329E9A10E00DEDD30 /* StarterView.swift in Sources */,
 				4D9F34F129E9A0F400DEDD30 /* RegisterView.swift in Sources */,
 				4D9F34E529E9A01D00DEDD30 /* TimerView.swift in Sources */,

@@ -5,18 +5,27 @@
 //  Created by Елена Логинова on 14.04.2023.
 //
 
-import Foundation
+import Combine
 
-class UserManager: ObservableObject {
-    @Published var isRegister = false
-    var name = ""
+final class UserManager: ObservableObject {
+    
+    @Published var user = User()
     
     var nameIsValid: Bool {
-        name.count >= 3
+        user.name.count >= 3
+    } 
+    
+    init() {}
+    
+    init(user: User = User()) {
+        self.user = user
     }
     
-    func logOut() {
-        name = ""
-        isRegister = false
-    }
+}
+
+class User: Codable {
+    
+    var name = ""
+    var isRegister = false
+    
 }

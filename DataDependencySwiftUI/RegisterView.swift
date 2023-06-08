@@ -8,36 +8,33 @@
 import SwiftUI
 
 struct RegisterView: View {
-    @EnvironmentObject private var user: UserManager
+    
+    @EnvironmentObject private var userManager: UserManager
     
     var body: some View {
         VStack {
-            TextFieldView(name: $user.name, nameIsValid: user.nameIsValid)
+            TextFieldView(name: $userManager.user.name, nameIsValid: userManager.nameIsValid)
             Button(action: registerUser) {
                 HStack {
                     Image(systemName: "checkmark.circle")
                     Text("OK")
                 }
             }
-            .disabled(!user.nameIsValid)
+            .disabled(!userManager.nameIsValid)
         }
     }
     
     private func registerUser() {
-        user.isRegister.toggle()
+        userManager.user.isRegister = true
+        DataManager.shared.save(user: userManager.user)
     }
-}
-
-struct RegisterView_Previews: PreviewProvider {
-    static var previews: some View {
-        RegisterView()
-            .environmentObject(UserManager())
-    }
+    
 }
 
 struct TextFieldView: View {
+    
     @Binding var name: String
-    var nameIsValid: Bool
+    var nameIsValid = false
     
     var body: some View {
         ZStack {
@@ -53,5 +50,14 @@ struct TextFieldView: View {
             }
             .padding(.bottom)
         }
+    }
+    
+}
+
+
+struct RegisterView_Previews: PreviewProvider {
+    static var previews: some View {
+        RegisterView()
+            .environmentObject(UserManager())
     }
 }
