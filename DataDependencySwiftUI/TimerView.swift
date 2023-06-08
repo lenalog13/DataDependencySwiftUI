@@ -21,9 +21,11 @@ struct TimerView: View {
                 .padding(.top, 100)
             Spacer()
             
-            ButtonView(timer: timer)
+            ButtonView(title: timer.buttonTitle, color: .red, action: timer.startTimer)
             
             Spacer()
+            
+            ButtonView(title: "LogOut", color: .blue, action: user.logOut)
         }
     }
 }

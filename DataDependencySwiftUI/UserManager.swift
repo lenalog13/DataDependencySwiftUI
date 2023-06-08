@@ -12,6 +12,7 @@ class UserManager: ObservableObject {
     var name = ""
     
     func logOut() {
-        
+        name = ""
+        isRegister = false
     }
 }
