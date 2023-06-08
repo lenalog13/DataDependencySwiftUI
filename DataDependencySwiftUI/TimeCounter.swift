@@ -8,7 +8,7 @@
 import Combine
 import Foundation
 
-class TimeCounter: ObservableObject {
+final class TimeCounter: ObservableObject {
     let objectWillChange = PassthroughSubject<TimeCounter, Never>()
     var counter = 3
     var buttonTitle = "Start"
